@@ -6,10 +6,10 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Email</th>
-                <th>Acciones</th>
+                <th>Nomb</th>
+                <th>Cognom</th>
+                <th>Gmail</th>
+                <th>Accions</th>
             </tr>
         </thead>
         <tbody>
@@ -33,12 +33,12 @@
                     {{ persona.email}}
                 </td>
                 <td v-if="editando === persona.id">
-                    <button class="btn btn-success" @click="guardarPersona(persona)">💾 Guardar</button>
-                    <button class="btn btn-secondary ml-2" @click="cancelarEdicion(persona)">❌ Cancelar</button>
+                    <button class="btn btn-success" @click="guardarPersona(persona)">💾 </button>
+                    <button class="btn btn-secondary ml-2" @click="cancelarEdicion(persona)">❌ </button>
                 </td>
                 <td v-else>
-                    <button class="btn btn-info" @click="editarPersona(persona)">✏️ Editar</button>
-                    <button class="btn btn-danger ml-2" @click="$emit('delete-persona', persona.id)">🗑️ Eliminar</button>
+                    <button class="btn btn-info" @click="editarPersona(persona)">✏️</button>
+                    <button class="btn btn-danger ml-2" @click="$emit('delete-persona', persona.id)">🗑️ </button>
                 </td>
             </tr>
         </tbody>
